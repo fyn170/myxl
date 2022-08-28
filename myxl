@@ -1,0 +1,14 @@
+#!/bin/sh
+#
+cd /www
+git clone https://github.com/fyn170/myxl
+cd myxl
+mv myxlun /bin
+mv luci/controller/myxl.lua /usr/lib/lua/luci/controller/myxl.lua
+mv luci/view/myxl.htm /usr/lib/lua/luci/view/myxl.htm
+chmod +x /bin/myxlun
+chmod +x /usr/lib/lua/luci/controller/myxl.lua
+chmod +x /usr/lib/lua/luci/view/myxl.htm
+opkg update
+rm -f /bin/myxl && rm -f /www/myxl/myxl && rm -f /www/myxl/README.md
+rm -rf /www/myxl/.git && rm -rf /www/myxl/luci && rm -f /www/myxl/rm myxl
