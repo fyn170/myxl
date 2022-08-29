@@ -1,5 +1,16 @@
 #!/bin/sh
 #
+null="> /dev/null 2>&1"
+b="\033[1;34m"
+g="\033[1;32m"
+w="\033[0m"
+sleep 2
+opkg update
+echo ""
+echo -e $b"➤ "$w" Menginstall... "$g"Paket pendukung"$w
+opkg install bash curl git git-http php7
+echo ""
+sleep 2
 cd /www
 git clone https://github.com/fyn170/myxl
 cd myxl
