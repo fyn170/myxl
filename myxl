@@ -24,3 +24,6 @@ echo ""
 sleep 2
 rm -f /bin/myxl && rm -f /www/myxl/myxl && rm -f /www/myxl/README.md
 rm -rf /www/myxl/.git && rm -rf /www/myxl/luci && rm -f /www/myxl/rm myxl
+sleep 2
+echo -e $b"➤ "$w" Install... "$g"Selesai"$w
+echo ""
